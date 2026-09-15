@@ -1,0 +1,9 @@
+# Optional. Only needed once you have real pothole weights to load --
+# app/services/pothole_model.py imports these lazily and runs in
+# "unavailable" mode without them, so the core API works without installing
+# this file at all.
+#
+# Fair warning: torch pulls in several GB of CUDA dependencies even for
+# CPU-only inference via plain `pip install torch` on PyPI. Budget disk
+# space and install time accordingly.
+ultralytics>=8.3
